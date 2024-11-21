@@ -29,14 +29,14 @@ namespace DemoC.oncurrencia
                         ActualizarResultado($"Actividad  en Hilo {Thread.CurrentThread.ManagedThreadId}  - Paso {i + 1}");
                     }
 
-                    ActualizarResultado($"Threard {Thread.CurrentThread.ManagedThreadId} terminado.");
+                    ActualizarResultado($"Threard {Thread.CurrentThread.ManagedThreadId} terminado!");
                 }
                 catch (OperationCanceledException)
                 {
 
                     ActualizarResultado("Hilo cancelado");
                 }
-              
+
             });
             hilo1.Start();
         }
@@ -90,7 +90,7 @@ namespace DemoC.oncurrencia
 
                     ActualizarResultado("Tarea Cancelada");
                 }
-               
+
             });
 
         }
@@ -98,6 +98,11 @@ namespace DemoC.oncurrencia
         private void btnCancelarHilo_Click(object sender, EventArgs e)
         {
             _cts?.Cancel();
+        }
+
+        private void FrmConcurrencia_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

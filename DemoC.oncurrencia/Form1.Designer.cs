@@ -135,6 +135,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "FrmConcurrencia";
             Text = "Demostarcion de Concurrencia";
+            Load += FrmConcurrencia_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             splitContainer1.Panel2.PerformLayout();
